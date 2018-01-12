@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Watchlist
+{% endblock %}
+
+{% block main %}
+ <form action="{{ url_for('watchlist') }}" method="post">
+    <table class="table table-striped" style="width:100%">
+      <tr>
+        <th>Symbol</th>
+        <th>Current Price</th>
+      </tr>
+    {% for watch in watchlist %}
+      <tr>
+        <td>{{ watch.symbol }}</td>
+        <td>{{ watch.price }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  </form>
+
+{% endblock %}
