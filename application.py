@@ -8,7 +8,7 @@ from datetime import datetime
 
 from helpers import *
 
-# configure application
+# configure the application
 app = Flask(__name__)
 
 # ensure responses aren't cached
